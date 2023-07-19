@@ -1,0 +1,46 @@
+.flexContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.clacolatorBody {
+	width: 385px;
+	height: 490px;
+	background-color: #dcdcdc;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+}
+.solotionArea {
+	width: 282px;
+	height: 74px;
+	border: 1px black solid;
+	border-radius: 5px;
+	background-color: #a9a6a6;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.container {
+	display: flex;
+	gap: 2rem;
+}
+.numberedButtonSection {
+	width: fit-content;
+	height: fit-content;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+Button {
+	width: 3rem;
+	height: 3rem;
+}
+.opirationButtonsection {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
