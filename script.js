@@ -16,12 +16,15 @@ const buttonDivistion = document.querySelector(".buttonDivistion");
 const buttonDot = document.querySelector(".buttonDot");
 const buttonEquals = document.querySelector(".buttonEquals");
 // state mangement
-const solotionArea = document.querySelector(".solotionArea");
+const textArea = document.querySelector(".textArea");
 const body = document.querySelector("body");
+// the string numbers
 let firstNumber = "";
 let secondNumber = "";
-let opereation = "";
+// the  result of the operations
 let result = 0;
+// mangement of the currnet state
+let state = 1;
 
 // adding the event lisernes to ther buttons
 button1.addEventListener("click", (e) => {
@@ -67,22 +70,26 @@ button0.addEventListener("click", (e) => {
 // opereation section
 buttonPlus.addEventListener("click", (e) => {
 	body.dataset.operation = "+";
-	body.dataset.status = "2";
+	textArea.textContent = "";
+	return (state = 2);
 });
 
 buttonMinos.addEventListener("click", (e) => {
 	body.dataset.operation = "-";
-	body.dataset.status = "2";
+	textArea.textContent = "";
+	return (state = 2);
 });
 
 buttonMulti.addEventListener("click", (e) => {
 	body.dataset.operation = "x";
-	body.dataset.status = "2";
+	textArea.textContent = "";
+	return (state = 2);
 });
 
 buttonDivistion.addEventListener("click", (e) => {
 	body.dataset.operation = "/";
-	body.dataset.status = "2";
+	textArea.textContent = "";
+	return (state = 2);
 });
 
 buttonDot.addEventListener("click", (e) => {
@@ -90,42 +97,42 @@ buttonDot.addEventListener("click", (e) => {
 });
 
 buttonEquals.addEventListener("click", (e) => {
-	// if ((body.dataset.status = 1)) {
-	// 	solotionArea.textContent = "ENTER THE SECOND NUMBER";
-	// } else {
-	// 	if ((secondNumber = "")) {
-	// 		solotionArea.textContent = "ENTER THE SECOND NUMBER";
-	// 	} else {
-
-	// 	}
-	// }
-	firstNumber = Number(firstNumber);
-	secondNumber = Number(secondNumber);
-	switch (body.dataset.operation) {
-		case "+":
-			result = firstNumber + secondNumber;
-			break;
-		case "-":
-			result = firstNumber - secondNumber;
-			break;
-		case "x":
-			result = firstNumber * secondNumber;
-			break;
-		case "/":
-			result = firstNumber / secondNumber;
-			break;
+	if ((state = 1)) {
+		textArea.textContent = "ENTER THE SECOND NUMBER";
 	}
-	solotionArea.textContent = `${result}`;
-	console.log(firstNumber, secondNumber);
+	if ((state = 2)) {
+		number1 = Number(firstNumber);
+		number2 = Number(secondNumber);
+		switch (body.dataset.operation) {
+			case "+":
+				result = number1 + number2;
+
+				break;
+			case "-":
+				result = number1 - number2;
+				break;
+			case "x":
+				result = number1 * number2;
+				break;
+			case "/":
+				result = number1 / number2;
+				break;
+		}
+		textArea.textContent = `${result}`;
+	}
 });
+
 // functions
 // checks if we are on the first or second number and adds the number of the button you pressed
 function addnumbers(number) {
-	if ((body.dataset.status = 1)) {
-		firstNumber = firstNumber + number;
-		return firstNumber;
-	} else {
-		secondNumber = secondNumber + number;
-		return secondNumber;
+	switch (state) {
+		case 1:
+			firstNumber = firstNumber + number;
+			textArea.textContent = `${firstNumber}`;
+			break;
+		case 2:
+			secondNumber = secondNumber + number;
+			textArea.textContent = `${secondNumber}`;
+			break;
 	}
 }
