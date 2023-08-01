@@ -1,18 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"); */
+* {
+	box-sizing: border-box;
+}
+
+Button {
+	width: 3rem;
+	height: 3rem;
+}
 .flexContainer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 .clacolatorBody {
-	width: 385px;
-	height: 490px;
+	width: fit-content;
+	height: fit-content;
 	background-color: #dcdcdc;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap: 3rem;
+	padding: 2rem;
 }
 .solotionArea {
 	width: 282px;
@@ -29,8 +38,10 @@
 	justify-content: right;
 }
 .container {
-	display: flex;
-	gap: 2rem;
+	display: grid;
+	grid-template-columns: 1fr 3rem;
+	grid-template-rows: 3rem 1fr;
+	grid-row-gap: 2rem;
 }
 .numberedButtonSection {
 	width: fit-content;
@@ -41,13 +52,16 @@
 	justify-content: center;
 	align-items: center;
 	gap: 2rem;
-}
-Button {
-	width: 3rem;
-	height: 3rem;
+	grid-area: 2 / 1 / 3/ 2;
 }
 .opirationButtonsection {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+	grid-area: 2 /2 /3 /3;
+}
+.functionButtonSection {
+	display: flex;
+	gap: 2rem;
+	grid-area: 1 /1 /2 / 3;
 }
