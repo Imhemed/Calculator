@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -51,12 +51,24 @@ Button {
 	column-gap: 2vw;
 	row-gap: 2vw;
 }
+.buttonPlus {
+	grid-area: 2 /4 /3/ 5;
+}
+.buttonMinos {
+	grid-area: 3 /4 /4/ 5;
+}
+.buttonMulti {
+	grid-area: 4/4 /5/ 5;
+}
 
 @media (max-width: 769px) {
+	.clacolatorBody {
+		gap: 3vh;
+	}
 	.solotionArea {
 		width: 99vw;
 		height: 20vh;
-		margin-top: 1px;
+		margin-top: 2vh;
 	}
 	.container {
 		width: 99vw;

@@ -1,11 +1,23 @@
-for now I only plan on making it do one operation at a time but Plan on improving it in the future
+## Simple Calculator Project
 
-so the design is finished
+this is my first web calculator project
 
-the logic is mostly finished I just need to fix the state transition of the second number because right now it only adds number to the first number not the second
+from the designing to coding I did the whole thing by myself with the intention of doing one better in the future to know how much I have improved
 
-coding after the mockup design is finished is the best you do not need to adjust padding and spacing
+while I did not follow all the design guidelines I know I thought it wouldn't matter because this is not the last calculator I plan on making
 
-the figma dev mode is amazing I hope it stays free but I doubt it it has good fetures but it is far from being perfect like you can't just use it and expact a designer to write the full Css
+I learned a lot of things and improved on my current knowledge of the tools I used
 
-tommorow is the last day of this project
+### Tools used :
+
+1. HTML
+2. CSS
+3. JAVASCRIPT
+4. FIGMA
+
+### Lessons learned
+
+1. implement the best solution from the start do not do a half job and plan on fixing it later
+2. design the whole logic from the start with leaving room to add new features
+3. it is ok to take inspiration from other people designs
+4. MAKE THE DESIGN RESPONSIVE FROM THE START , IT IS A NIGHTMARE TO EDIT LATTER

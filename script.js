@@ -45,13 +45,16 @@ acButton.addEventListener("click", (e) => {
 	state = 1;
 	operation = "";
 	parentheses = 0;
+	textArea.textContent = "";
 	return firstNumber, secondNumber, result, state, operation, parentheses;
 });
 cButton.addEventListener("click", (e) => {
 	if (state == 1) {
 		firstNumber = "";
+		textArea.textContent = "";
 	} else {
 		secondNumber = "";
+		textArea.textContent = "";
 	}
 });
 openParenthesesButton.addEventListener("click", (e) => {
